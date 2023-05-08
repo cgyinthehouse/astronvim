@@ -12,14 +12,14 @@ return {
         "html",
         "tsserver",
         "eslint",
-        "pylsp",
         "bashls",
         "jsonls",
-        "ruff_lsp",
+        -- "ruff_lsp",
         "emmet_ls",
         "rust_analyzer",
         "tailwindcss",
         "pyright",
+        "yamlls",
       },
     },
   },
@@ -28,7 +28,7 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      ensure_installed = { "prettier", "stylua", "beautysh", "ruff", "eslint", "gitsigns" },
+      ensure_installed = { "prettier", "stylua", "beautysh", "eslint", "gitsigns" },
     },
   },
   {

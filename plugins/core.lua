@@ -20,6 +20,11 @@ return {
       return opts
     end,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    event = "BufEnter",
+    opts = { open_mapping = [[<C-\>]] },
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
