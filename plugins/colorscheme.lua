@@ -11,7 +11,23 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    config = function() require("catppuccin").setup {} end,
+    config = function()
+      require("catppuccin").setup {
+        integrations = {
+          sandwich = false,
+          noice = true,
+          mini = true,
+          leap = true,
+          markdown = true,
+          neotest = true,
+          cmp = true,
+          overseer = true,
+          lsp_trouble = true,
+          ts_rainbow2 = true,
+          which_key = true,
+        },
+      }
+    end,
   },
   {
     "folke/tokyonight.nvim",
