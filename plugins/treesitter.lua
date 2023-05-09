@@ -1,7 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  opts = {
-    ensure_installed = {
+  opts = function(_, opts)
+    opts.ensure_installed = {
       "bash",
       "c",
       "javascript",
@@ -21,8 +21,8 @@ return {
       "toml",
       "dockerfile",
       "graphql",
-    },
-  },
+    }
+  end,
   dependencies = {
     {
       "HiPhish/nvim-ts-rainbow2",

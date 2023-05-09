@@ -23,7 +23,15 @@ return {
   {
     "akinsho/toggleterm.nvim",
     event = "BufEnter",
-    opts = { open_mapping = [[<C-\>]] },
+    opts = function(_, opt) opt.open_mapping = [[<C-\>]] end,
+  },
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      top_down = false,
+      max_width = 80,
+      background_colour = "#000000",
+    },
   },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
