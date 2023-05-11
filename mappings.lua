@@ -37,6 +37,7 @@ return {
     ["<leader>xl"] = { "<cmd>TroubleToggle loclist<cr>", desc = "Loclist " },
     ["<leader>xq"] = { "<cmd>TroubleToggle quickfix<cr>", desc = "Quickfix " },
     ["<leader>xr"] = { "<cmd>TroubleToggle lsp_references<cr>", desc = "Lsp References" },
+    ["<leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zen Mode" },
     ["<A-j>"] = { ":m .+1<CR>", desc = "Move text down" },
     ["<A-k>"] = { ":m .-2<CR>", desc = "Move text up" },
     -- quick save
