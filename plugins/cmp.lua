@@ -6,6 +6,24 @@ return {
     dependencies = {
       "hrsh7th/cmp-cmdline",  -- add cmp-cmdline as dependency of cmp
     },
+    opts = function(_, opts)
+      local cmp = require "cmp"
+      opts.formatting.format = require("lspkind").cmp_format {
+        mode = "symbol",
+        maxwidth = 50,
+        ellipsis_char = "",
+        symbol_map = {
+          Codeium = "󰦪",
+        },
+      }
+      opts.sources = cmp.config.sources {
+        { name = "codeium",  priority = 1000 }, -- new source
+        { name = "nvim_lsp", priority = 900 },
+        { name = "luasnip",  priority = 750 },
+        { name = "buffer",   priority = 500 },
+        { name = "path",     priority = 250 },
+      }
+    end,
     config = function(_, opts)
       local cmp = require "cmp"
       -- run cmp setup
@@ -35,4 +53,3 @@ return {
   },
   { "hrsh7th/cmp-cmdline" },
 }
-

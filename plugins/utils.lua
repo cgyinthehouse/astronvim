@@ -11,6 +11,15 @@ return {
       }
     end,
   },
-  { "folke/zen-mode.nvim", cmd = "ZenMode" },
   "folke/trouble.nvim",
+  { "folke/zen-mode.nvim", cmd = "ZenMode" },
+  {
+    "jcdickinson/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    event = "InsertEnter",
+    config = function() require("codeium").setup {} end,
+  },
 }

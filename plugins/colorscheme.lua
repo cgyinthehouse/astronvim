@@ -1,18 +1,14 @@
 return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
   {
     "catppuccin/nvim",
     name = "catppuccin",
     config = function()
       require("catppuccin").setup {
+        transparent_background = true,
+        term_colors = true,
+        dim_inactive = {
+          enabled = true,
+        },
         integrations = {
           sandwich = false,
           noice = true,
@@ -21,6 +17,8 @@ return {
           markdown = true,
           neotest = true,
           cmp = true,
+          notify = true,
+          telescope = true,
           overseer = true,
           lsp_trouble = true,
           ts_rainbow2 = true,
@@ -31,7 +29,10 @@ return {
   },
   {
     "folke/tokyonight.nvim",
-    opts = { transparent = true },
+    opts = function(_, opts)
+      opts.transparent = true
+      opts.dim_inactive = true
+    end,
     name = "tokyonight",
   },
   {
