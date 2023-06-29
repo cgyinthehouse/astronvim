@@ -13,7 +13,7 @@ return {
         maxwidth = 50,
         ellipsis_char = "",
         symbol_map = {
-          Codeium = "󰦪",
+          Codeium = "󰘦",
         },
       }
       opts.sources = cmp.config.sources {

@@ -21,6 +21,7 @@ return {
       "toml",
       "dockerfile",
       "graphql",
+      "prisma",
     }
   end,
   dependencies = {

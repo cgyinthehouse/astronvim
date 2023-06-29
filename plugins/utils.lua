@@ -11,7 +11,7 @@ return {
       }
     end,
   },
-  "folke/trouble.nvim",
+  { "folke/trouble.nvim",  event = "BufEnter" },
   { "folke/zen-mode.nvim", cmd = "ZenMode" },
   {
     "jcdickinson/codeium.nvim",
@@ -21,5 +21,14 @@ return {
     },
     event = "InsertEnter",
     config = function() require("codeium").setup {} end,
+  },
+  {
+    "rmagatti/goto-preview",
+    keys = "gp",
+    config = function()
+      require("goto-preview").setup {
+        default_mappings = true,
+      }
+    end,
   },
 }
