@@ -2,15 +2,16 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
-      "ahmedkhalf/project.nvim",
       "debugloop/telescope-undo.nvim",
     },
     config = function(plugin, opts)
-      require "plugins.configs.telescope" (plugin, opts)
+      require "plugins.configs.telescope"(plugin, opts)
       local telescope = require "telescope"
-      telescope.load_extension "projects"
       telescope.load_extension "undo"
     end,
+    keys = {
+      { "<leader>fu", "<cmd>Telescope undo<cr>", desc = "Find undos" },
+    },
     opts = function(_, opts)
       opts.defaults.sorting_strategy = "descending"
       opts.defaults.path_display = { "smart" }
@@ -39,6 +40,5 @@ return {
       }
     end,
   },
-  { "ahmedkhalf/project.nvim",      config = function() require("project_nvim").setup() end },
   { "debugloop/telescope-undo.nvim" },
 }
