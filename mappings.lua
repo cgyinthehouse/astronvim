@@ -10,15 +10,6 @@ return {
     -- mappings seen under group name "Buffer"
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bf"] = { "<cmd>Telescope buffers<cr>", desc = "List buffers" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(
-          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
-        )
-      end,
-      desc = "Pick to close",
-    },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Command history" },
@@ -34,9 +25,5 @@ return {
     -- Move text up and down
     ["<A-j>"] = { ":m'>+<CR>gv", desc = "Move text down" },
     ["<A-k>"] = { ":m-2<CR>gv", desc = "Move text up" },
-  },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
   },
 }
