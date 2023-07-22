@@ -13,7 +13,12 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Command history" },
+
+    -- Gitsigns
     ["<leader>gh"] = { "<cmd>Gitsigns toggle_linehl<cr>", desc = "Line highlight" },
+    ["<leader>gr"] = { "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset Git hunk" },
+    ["<leader>gR"] = { "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset Git buffer" },
+
     ["<leader>h"] = { ":nohl<cr>", desc = "No search highlights" },
     ["<leader>;"] = { "<cmd>Alpha<cr>", desc = "Home Screen" },
     ["<leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zen Mode" },

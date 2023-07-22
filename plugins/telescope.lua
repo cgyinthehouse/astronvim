@@ -8,6 +8,7 @@ return {
       require "plugins.configs.telescope"(plugin, opts)
       local telescope = require "telescope"
       telescope.load_extension "undo"
+      telescope.load_extension "package_info"
     end,
     keys = {
       { "<leader>fu", "<cmd>Telescope undo<cr>", desc = "Find undos" },
@@ -27,6 +28,9 @@ return {
         height = 0.80,
       }
       opts.extensions = {
+        package_info = {
+          theme = "dropdown",
+        },
         undo = {
           use_delta = true,
           side_by_side = true,
