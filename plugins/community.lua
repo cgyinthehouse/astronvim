@@ -12,10 +12,12 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.vue" },
 
   -- editing support
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { "folke/todo-comments.nvim", keys = { { "<leader>fT", "<cmd>TodoTelescope<cr>", desc = "Todos" } } },
 
   -- motion
   { import = "astrocommunity.motion.nvim-surround" },
