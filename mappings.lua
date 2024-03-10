@@ -14,6 +14,8 @@ return {
     -- this is useful for naming menus
     ["<leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
 
+    ["gp"] = { name = "goto-preview" },
+
     -- Gitsigns
     ["<leader>gh"] = { "<cmd>Gitsigns toggle_linehl<cr>", desc = "Line highlight" },
     ["<leader>gr"] = { "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset Git hunk" },

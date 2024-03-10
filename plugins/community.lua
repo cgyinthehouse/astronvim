@@ -17,7 +17,7 @@ return {
   -- editing support
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { "folke/todo-comments.nvim", keys = { { "<leader>fT", "<cmd>TodoTelescope<cr>", desc = "Todos" } } },
+  { "folke/todo-comments.nvim", keys = { { "<leader>fT", "<cmd>TodoTelescope<cr>", desc = "List Todos" } } },
 
   -- motion
   { import = "astrocommunity.motion.nvim-surround" },
