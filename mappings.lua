@@ -12,7 +12,7 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
-    ["<leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Command history" },
+    ["<leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
 
     -- Gitsigns
     ["<leader>gh"] = { "<cmd>Gitsigns toggle_linehl<cr>", desc = "Line highlight" },
