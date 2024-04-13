@@ -16,6 +16,6 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 #### 2. Clone this repository
 
 ```shell
-git clone --dpeth 1 https://github.com/cgyinthehouse/astronvim ~/.config/nvim
+git clone --depth 1 https://github.com/cgyinthehouse/astronvim ~/.config/nvim
 nvim
 ```
