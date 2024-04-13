@@ -5,7 +5,7 @@ return {
       "debugloop/telescope-undo.nvim",
     },
     config = function(plugin, opts)
-      require "plugins.configs.telescope"(plugin, opts)
+      require "astronvim.plugins.configs.telescope"(plugin, opts)
       local telescope = require "telescope"
       telescope.load_extension "undo"
       telescope.load_extension "package_info"
