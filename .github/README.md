@@ -5,24 +5,17 @@
 
 ```shell
 mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
-
-#### 1. (Optional)Clone AstroNvim
-If you haven't install Astronvim:
-
+#### 1. Clean neovim folders (Optional but recommended)
 ```shell
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.local/state/nvim ~/.local/state/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
 
 #### 2. Clone this repository
 
 ```shell
-git clone https://github.com/cgyinthehouse/astronvim ~/.config/nvim/lua/user
-```
-
-#### 3. Start Neovim
-
-```shell
+git clone --dpeth 1 https://github.com/cgyinthehouse/astronvim ~/.config/nvim
 nvim
 ```
