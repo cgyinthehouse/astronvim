@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   -- language packs
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python-ruff" },
