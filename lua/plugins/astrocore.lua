@@ -49,6 +49,7 @@ return {
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         ["<Leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
+        ["grr"] = { "<cmd>Telescope lsp_references<cr>", desc = "Find References" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus

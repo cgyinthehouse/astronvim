@@ -19,6 +19,7 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.sql" },
 
   -- editing support
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
