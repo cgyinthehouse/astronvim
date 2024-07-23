@@ -21,6 +21,10 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.sql" },
 
+  -- completion
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  { import = "astrocommunity.completion.codeium-nvim" },
+
   -- editing support
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },

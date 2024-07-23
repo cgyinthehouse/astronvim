@@ -53,15 +53,6 @@ return {
     end,
   },
   {
-    "jcdickinson/codeium.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    event = "InsertEnter",
-    config = function() require("codeium").setup {} end,
-  },
-  {
     "rmagatti/goto-preview",
     keys = "gp",
     config = function()

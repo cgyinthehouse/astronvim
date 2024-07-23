@@ -60,7 +60,7 @@ return {
         ["<Leader>gR"] = { "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset Git buffer" },
 
         ["<Leader>h"] = { ":nohl<cr>", desc = "No search highlights" },
-        ["<Leader>;"] = { "<cmd>Alpha<cr>", desc = "Home Screen" },
+        -- ["<Leader>;"] = { "<cmd>Alpha<cr>", desc = "Home Screen" },
         ["<Leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zen Mode" },
 
         -- Move text up and down
