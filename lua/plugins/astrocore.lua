@@ -45,8 +45,8 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs with `H` and `L`
-        L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        -- L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        -- H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         ["<Leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
         ["grr"] = { "<cmd>Telescope lsp_references<cr>", desc = "Find References" },
