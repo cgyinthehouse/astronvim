@@ -23,6 +23,14 @@ return {
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.sql" },
 
+  -- leetcode
+  { import = "astrocommunity.game.leetcode-nvim" },
+  {
+    "kawre/leetcode.nvim",
+    keys = { { "<Leader>L", "<cmd>Leet<cr>", desc = "Leetcode" } },
+    opts = function(_, opts) opts.lang = "typescript" end,
+  },
+
   -- completion
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.codeium-nvim" },
