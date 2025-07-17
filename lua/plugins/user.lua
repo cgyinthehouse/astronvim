@@ -78,7 +78,7 @@ return {
       sources = {
         default = { "lsp", "path", "snippets", "buffer", "codeium" },
         providers = {
-          codeium = { name = "Codeium", module = "codeium.blink", async = true },
+          codeium = { name = "Codeium", module = "codeium.blink", async = true, score_offset = -1 },
         },
       },
     },
