@@ -26,28 +26,16 @@ return {
 
   -- leetcode
   { import = "astrocommunity.game.leetcode-nvim" },
-  {
-    "kawre/leetcode.nvim",
-    keys = { { "<Leader>L", "<cmd>Leet<cr>", desc = "Leetcode" } },
-    opts = function(_, opts) opts.lang = "typescript" end,
-  },
 
   -- completion
   { import = "astrocommunity.completion.cmp-cmdline" },
-  { import = "astrocommunity.completion.codeium-nvim" },
 
   -- editing support
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
-  { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { "folke/todo-comments.nvim", keys = { { "<Leader>fT", "<cmd>TodoTelescope<cr>", desc = "Find Todos" } } },
 
   -- motion
   { import = "astrocommunity.motion.nvim-surround" },
 
   -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-
-  -- project
-  { import = "astrocommunity.project.project-nvim" },
-  { "jay-babu/project.nvim", keys = { { "<Leader>fp", "<cmd>Telescope projects<cr>", desc = "Find projects" } } },
 }

@@ -9,14 +9,6 @@ return {
     opts = function(_, opt) opt.open_mapping = [[<C-\>]] end,
   },
   {
-    "rcarriga/nvim-notify",
-    opts = {
-      top_down = false,
-      max_width = 80,
-      background_colour = "#000000",
-    },
-  },
-  {
     "rebelot/heirline.nvim",
     opts = function(_, opts)
       local status = require "astroui.status"
@@ -61,5 +53,28 @@ return {
       }
     end,
   },
-  { "folke/zen-mode.nvim", cmd = "ZenMode" },
+  {
+    "kawre/leetcode.nvim",
+    keys = { { "<Leader>L", "<cmd>Leet<cr>", desc = "Leetcode" } },
+    opts = function(_, opts) opts.lang = "typescript" end,
+  },
+  {
+    "Exafunction/windsurf.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function() require("codeium").setup {} end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    optional = true,
+    keys = {
+      {
+        "<Leader>fT",
+        function() Snacks.picker.todo_comments { keywords = { "TODO", "FIX", "FIXME" } } end,
+        desc = "Find Todos",
+      },
+    },
+  },
 }

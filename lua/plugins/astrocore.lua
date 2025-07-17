@@ -12,7 +12,7 @@ return {
     features = {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = true, -- enable autopairs at start cmp = true, -- enable completion at start
-      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      diagnostics = { virtual_text = true, virtual_lines = false },
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
@@ -48,8 +48,8 @@ return {
         -- L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         -- H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        ["<Leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
-        ["grr"] = { "<cmd>Telescope lsp_references<cr>", desc = "Find References" },
+        -- ["<Leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
+        -- ["grr"] = { "<cmd>Telescope lsp_references<cr>", desc = "Find References" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -61,7 +61,7 @@ return {
 
         ["<Leader>h"] = { ":nohl<cr>", desc = "No search highlights" },
         -- ["<Leader>;"] = { "<cmd>Alpha<cr>", desc = "Home Screen" },
-        ["<Leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zen Mode" },
+        -- ["<Leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zen Mode" },
 
         -- Move text up and down
         ["<A-j>"] = { ":m .+1<CR>", desc = "Move text down" },
