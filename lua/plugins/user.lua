@@ -62,9 +62,26 @@ return {
     "Exafunction/windsurf.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
     },
     config = function() require("codeium").setup {} end,
+    cmd = "Codeium",
+    build = ":Codeium Auth",
+  },
+  {
+    "saghen/blink.cmp",
+    dependencies = {
+      {
+        "Exafunction/windsurf.nvim",
+      },
+    },
+    opts = {
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer", "codeium" },
+        providers = {
+          codeium = { name = "Codeium", module = "codeium.blink", async = true },
+        },
+      },
+    },
   },
   {
     "folke/todo-comments.nvim",

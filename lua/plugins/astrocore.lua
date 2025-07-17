@@ -49,7 +49,7 @@ return {
         -- H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- ["<Leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
-        -- ["grr"] = { "<cmd>Telescope lsp_references<cr>", desc = "Find References" },
+        ["grr"] = { "<cmd>Telescope lsp_references<cr>", desc = "Find References" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -60,8 +60,7 @@ return {
         ["<Leader>gR"] = { "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset Git buffer" },
 
         ["<Leader>h"] = { ":nohl<cr>", desc = "No search highlights" },
-        -- ["<Leader>;"] = { "<cmd>Alpha<cr>", desc = "Home Screen" },
-        -- ["<Leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zen Mode" },
+        -- ["<Leader>;"] = { ":lua Snacks.dashboard()", desc = "Home Screen" },
 
         -- Move text up and down
         ["<A-j>"] = { ":m .+1<CR>", desc = "Move text down" },
