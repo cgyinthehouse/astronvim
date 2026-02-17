@@ -7,8 +7,8 @@ return {
   "AstroNvim/astrocommunity",
   -- language packs
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python-ruff" },
@@ -38,4 +38,7 @@ return {
 
   -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+
+  -- vscode icons
+  { import = "astrocommunity.recipes.vscode-icons" },
 }

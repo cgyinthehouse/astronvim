@@ -32,7 +32,7 @@ return {
       LSPLoading8 = "⠧",
       LSPLoading9 = "⠇",
       LSPLoading10 = "⠏",
-      Codeium = "󰘦",
+      Codeium = "󱫯", -- FIXME: seems doesn't work
     },
   },
 }
