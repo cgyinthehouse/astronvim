@@ -11,8 +11,9 @@ return {
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-      autopairs = true, -- enable autopairs at start cmp = true, -- enable completion at start
-      diagnostics = { virtual_text = true, virtual_lines = false },
+      autopairs = true, -- enable autopairs at start
+      cmp = true, -- enable completion at start
+      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
@@ -28,12 +29,12 @@ return {
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
-        signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-        wrap = true, -- sets vim.opt.wrap
+        signcolumn = "yes", -- sets vim.opt.signcolumn to yes
+        wrap = false, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
-        -- NOTE: `mapLeader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
+        -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
       },
     },
@@ -44,24 +45,25 @@ return {
       n = {
         -- second key is the lefthand side of the map
 
-        -- navigate buffer tabs with `H` and `L`
-        -- L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        -- H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        -- navigate buffer tabs
+        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        -- ["<Leader>f;"] = { "<cmd>Telescope command_history<cr>", desc = "Find Command history" },
-        ["grr"] = { "<cmd>Telescope lsp_references<cr>", desc = "Find References" },
+        -- mappings seen under group name "Buffer"
+        ["<Leader>bd"] = {
+          function()
+            require("astroui.status.heirline").buffer_picker(
+              function(bufnr) require("astrocore.buffer").close(bufnr) end
+            )
+          end,
+          desc = "Close buffer from tabline",
+        },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
-
-        -- Gitsigns
-        ["<Leader>gh"] = { "<cmd>Gitsigns toggle_linehl<cr>", desc = "Toggle line highlight" },
-        ["<Leader>gr"] = { "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset Git hunk" },
-        ["<Leader>gR"] = { "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset Git buffer" },
+        -- ["<Leader>b"] = { desc = "Buffers" },
 
         ["<Leader>h"] = { ":nohl<cr>", desc = "No search highlights" },
-        -- ["<Leader>;"] = { ":lua Snacks.dashboard()", desc = "Home Screen" },
-
         -- Move text up and down
         ["<A-j>"] = { ":m .+1<CR>", desc = "Move text down" },
         ["<A-k>"] = { ":m .-2<CR>", desc = "Move text up" },
@@ -70,10 +72,6 @@ return {
         -- Move text up and down
         ["<A-j>"] = { ":m'>+<CR>gv", desc = "Move text down" },
         ["<A-k>"] = { ":m-2<CR>gv", desc = "Move text up" },
-      },
-      t = {
-        -- setting a mapping to false will disable it
-        -- ["<esc>"] = false,
       },
     },
   },
