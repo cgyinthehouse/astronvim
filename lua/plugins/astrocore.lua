@@ -63,7 +63,6 @@ return {
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
-        ["<Leader>h"] = { ":nohl<cr>", desc = "No search highlights" },
         -- Move text up and down
         ["<A-j>"] = { ":m .+1<CR>", desc = "Move text down" },
         ["<A-k>"] = { ":m .-2<CR>", desc = "Move text up" },
