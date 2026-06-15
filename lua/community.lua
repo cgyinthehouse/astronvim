@@ -5,8 +5,8 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
   -- language packs
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.cpp" },
@@ -26,6 +26,7 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.biome" },
 
   -- leetcode
   { import = "astrocommunity.game.leetcode-nvim" },

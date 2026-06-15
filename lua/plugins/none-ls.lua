@@ -19,11 +19,6 @@ return {
       -- Set a formatter
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
-      null_ls.builtins.formatting.prettierd.with {
-        env = {
-          PRETTIERD_DEFAULT_CONFIG = vim.fn.expand "~/.config/nvim/utils/linter-config/.prettierrc.yaml",
-        },
-      },
     })
   end,
 }
