@@ -59,31 +59,6 @@ return {
     opts = function(_, opts) opts.lang = "typescript" end,
   },
   {
-    "Exafunction/windsurf.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = function() require("codeium").setup {} end,
-    cmd = "Codeium",
-    build = ":Codeium Auth",
-  },
-  {
-    "saghen/blink.cmp",
-    dependencies = {
-      {
-        "Exafunction/windsurf.nvim",
-      },
-    },
-    opts = {
-      sources = {
-        default = { "lsp", "path", "snippets", "buffer", "codeium" },
-        providers = {
-          codeium = { name = "Codeium", module = "codeium.blink", async = true, score_offset = -1 },
-        },
-      },
-    },
-  },
-  {
     "folke/todo-comments.nvim",
     optional = true,
     keys = {
